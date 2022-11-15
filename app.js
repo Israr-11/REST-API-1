@@ -11,8 +11,8 @@ const books=require("./routes/books");
 app.use(express.json());
 app.use("/books",books);
 //PORTS
-app.listen(3000);
-
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Running on port: ${port}`));
 
 
 
